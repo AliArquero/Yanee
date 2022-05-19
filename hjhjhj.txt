@@ -1,0 +1,1 @@
+Fatal error: Uncaught Error: Class 'Twig\Loader\FilesystemLoader' not found in C:\xampp\htdocs\functies.php:14 Stack trace: #0 C:\xampp\htdocs\classloader.php(6): mboopen->__construct() #1 C:\xampp\htdocs\index.php(3): include_once('C:\\xampp\\htdocs...') #2 {main} thrown in C:\xampp\htdocs\functies.php on line 14
