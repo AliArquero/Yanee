@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 03 jun 2019 om 13:23
--- Serverversie: 10.1.28-MariaDB
--- PHP-versie: 7.1.11
+-- Gegenereerd op: 30 mei 2022 om 10:50
+-- Serverversie: 10.4.24-MariaDB
+-- PHP-versie: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 
+-- Database: `mbo-open`
 --
 
 -- --------------------------------------------------------
@@ -62,9 +61,7 @@ CREATE TABLE `speler` (
   `roepnaam` varchar(50) NOT NULL,
   `tussenvoegsels` varchar(50) NOT NULL,
   `achternaam` varchar(50) NOT NULL,
-  `schoolId` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
- 
+  `schoolId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -72,7 +69,9 @@ CREATE TABLE `speler` (
 --
 
 INSERT INTO `speler` (`id`, `roepnaam`, `tussenvoegsels`, `achternaam`, `schoolId`) VALUES
-(0, 'Dummy', '---', 'Dummy', 0);
+(0, 'Dumma', 'Dumma', 'Dumma', 0),
+(3, 'Ali', 'el', 'Maaroufi', 0),
+(4, 'hhgh', 'Maaroufi', 'Maaroufi', 0);
 
 -- --------------------------------------------------------
 
@@ -85,7 +84,7 @@ CREATE TABLE `toernooi` (
   `omschrijving` varchar(50) NOT NULL,
   `datum` date NOT NULL,
   `status` int(11) NOT NULL,
-  `actieve_ronde` int(1) NOT NULL DEFAULT '1'
+  `actieve_ronde` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -151,19 +150,19 @@ ALTER TABLE `wedstrijd`
 -- AUTO_INCREMENT voor een tabel `school`
 --
 ALTER TABLE `school`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT voor een tabel `speler`
 --
 ALTER TABLE `speler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT voor een tabel `toernooi`
 --
 ALTER TABLE `toernooi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT voor een tabel `wedstrijd`
