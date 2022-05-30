@@ -1,0 +1,5 @@
+zoekbalk spelers toevoegen 
+
+email bij de td en database toevoegen	
+
+filter toevoegen aan td
